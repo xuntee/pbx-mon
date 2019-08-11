@@ -123,6 +123,10 @@
     $ make
     $ make install
 
+ systemctl start mariadb.service
+
+cd  pbx-mon
+
 **安装配置文件**
 
     $ make config
@@ -130,6 +134,14 @@
 **安装服务脚本**
 
     $ make script
+    
+    如出现 Could not connect to Redis at 127.0.0.1:6379: Connection refused
+    
+    1.找到redis.conf 并修改 daemonize no 为 daemonize yes ，这样就可以默认启动就后台运行
+    $ vi /etc/redis.conf
+    2.开启客户端要确保服务端启动
+    $ redis-server /etc/redis.conf
+
 
 **安装 Web 系统**
 
