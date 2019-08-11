@@ -3,6 +3,9 @@
 镜像 http://archive.kernel.org/centos-vault/7.3.1611/isos/x86_64/CentOS-7-x86_64-LiveGNOME-1611.iso
 
 ![screenshot](./script/screenshot.png)
+关闭 防火墙
+systemctl stop firewalld.service            #停止firewall
+systemctl disable firewalld.service        #禁止firewall开机启动
 
 #### 依赖包及环境
 
