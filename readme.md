@@ -1,5 +1,7 @@
 基于 FreeSWITCH 的录音与转码平台，支持 G729, G711 转码，并且支持多接口接入部署。
 
+镜像 http://archive.kernel.org/centos-vault/7.3.1611/isos/x86_64/CentOS-7-x86_64-LiveGNOME-1611.iso
+
 ![screenshot](./script/screenshot.png)
 
 #### 依赖包及环境
@@ -79,6 +81,9 @@
     $ ./configure --disable-debug --disable-libyuv --disable-libvpx
     $ make
     $ make install
+    
+    以上安装报错 You must install libopus-dev to build mod_opus. Stop.
+    参考 https://blog.csdn.net/gpf626487/article/details/81213711 安装通过 记得要 make clean 从来
 
 **安装 ESL PHP 模块**
 
@@ -95,12 +100,18 @@
 
 **安装 phpredis**
 
+
+
     $ git clone https://github.com/phpredis/phpredis.git
     $ cd phpredis
     $ phpize
     $ ./configure
     $ make
     $ make install
+    
+    以上报错 
+    参考 https://blog.csdn.net/wplblog/article/details/52195041 安装通过 
+    
 
 **安装 yaf 框架**
 
